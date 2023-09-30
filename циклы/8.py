@@ -1,8 +1,17 @@
-a = input('введите ваше число ')
-q = 0
-w = 1
-for i in a:
-    q += int(i)
-    w *= int(i)
-print (f'сумма {q}')
-print (f'произведение   {w}')
+q = []
+a = int(input('a: '))
+
+if a < 0:
+        print('ошибка')
+else:
+    while a != 0:
+        q.append(a % 10)
+        a = a // 10
+q.reverse()
+w = 0
+e = 1
+
+for i in q:
+     w += i
+     e *= i
+print(w, e)
